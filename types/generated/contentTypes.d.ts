@@ -971,6 +971,41 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
   };
 }
 
+export interface ApiLexikoneintragLexikoneintrag extends Schema.CollectionType {
+  collectionName: 'lexikoneintrags';
+  info: {
+    singularName: 'lexikoneintrag';
+    pluralName: 'lexikoneintrags';
+    displayName: 'Lexikoneintrag';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    begriff: Attribute.String & Attribute.Required & Attribute.Unique;
+    definition: Attribute.Text;
+    thema: Attribute.Enumeration<['Netzwerktechnik', 'BWL']>;
+    slug: Attribute.String;
+    content: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lexikoneintrag.lexikoneintrag',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lexikoneintrag.lexikoneintrag',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -994,6 +1029,7 @@ declare module '@strapi/types' {
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
+      'api::lexikoneintrag.lexikoneintrag': ApiLexikoneintragLexikoneintrag;
     }
   }
 }

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lexikoneintrags",
+  "info": {
+    "singularName": "lexikoneintrag",
+    "pluralName": "lexikoneintrags",
+    "displayName": "Lexikoneintrag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "begriff": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "definition": {
+      "type": "text"
+    },
+    "thema": {
+      "type": "enumeration",
+      "enum": [
+        "Netzwerktechnik",
+        "BWL"
+      ]
+    },
+    "slug": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}
