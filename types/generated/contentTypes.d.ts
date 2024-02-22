@@ -1000,7 +1000,8 @@ export interface ApiLexikoneintragLexikoneintrag extends Schema.CollectionType {
         'DevOps',
         'Datenschutz',
         'Testing',
-        'Serveradministration'
+        'Serveradministration',
+        'Informationstechnik'
       ]
     >;
     slug: Attribute.String;
