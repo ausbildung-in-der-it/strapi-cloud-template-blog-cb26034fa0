@@ -985,7 +985,23 @@ export interface ApiLexikoneintragLexikoneintrag extends Schema.CollectionType {
   attributes: {
     begriff: Attribute.String & Attribute.Required & Attribute.Unique;
     definition: Attribute.Text;
-    thema: Attribute.Enumeration<['Netzwerktechnik', 'BWL']>;
+    thema: Attribute.Enumeration<
+      [
+        'Netzwerktechnik',
+        'BWL',
+        'Datenbanken',
+        'Informationssicherheit',
+        'Softwareentwicklung',
+        'Virtualisierung',
+        'Cloud Computing',
+        'Projektmanagement',
+        'Wirtschafts- und Sozialkunde',
+        'Qualit\u00E4tsmanagement',
+        'DevOps',
+        'Datenschutz',
+        'Testing'
+      ]
+    >;
     slug: Attribute.String;
     content: Attribute.RichText;
     createdAt: Attribute.DateTime;

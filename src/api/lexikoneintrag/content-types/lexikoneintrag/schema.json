@@ -24,7 +24,18 @@
       "type": "enumeration",
       "enum": [
         "Netzwerktechnik",
-        "BWL"
+        "BWL",
+        "Datenbanken",
+        "Informationssicherheit",
+        "Softwareentwicklung",
+        "Virtualisierung",
+        "Cloud Computing",
+        "Projektmanagement",
+        "Wirtschafts- und Sozialkunde",
+        "Qualitätsmanagement",
+        "DevOps",
+        "Datenschutz",
+        "Testing"
       ]
     },
     "slug": {
